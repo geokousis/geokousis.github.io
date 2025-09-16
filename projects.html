@@ -1,1 +1,104 @@
-<!-- ...existing content from projects.html... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Georgios Kousis Tsampazis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-bar">
+  <span class="terminal-title"><span id="terminal-prompt">kousis@linux:~$</span> <span id="terminal-anim"></span></span>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:0.5em;">
+  <span id="back-cv-icon" onclick="window.location.href='index.html'" style="display:inline-flex;align-items:center;cursor:pointer;font-size:1.5em;padding:2px 8px;border-radius:4px;transition:background 0.2s,color 0.2s;" title="Back to CV">&#8230;</span>
+        <button id="toggle-theme" aria-label="Toggle dark/light mode">🌓</button>
+      </div>
+    </div>
+    <div class="terminal-main">
+      <div class="terminal-content" id="projects-content" style="display:none;">
+        <div class="github-cards">
+          <div class="github-card">
+            <div class="github-card-header">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+              <span class="github-title">SoloVar</span>
+            </div>
+            <div class="github-desc">Modular toolkit for somatic variant analysis (SNV & CNV) in tumor samples without a matching normal. YAML-driven, end-to-end pipelines.</div>
+            <a class="github-link" href="https://github.com/geokousis/SoloVar" target="_blank">View on GitHub</a>
+          </div>
+          <div class="github-card">
+            <div class="github-card-header">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+              <span class="github-title">ddraptor</span>
+            </div>
+            <div class="github-desc">Tool for ddRAD enzyme selection and fragment analysis using Aho–Corasick pattern matching and summary visualizations.</div>
+            <a class="github-link" href="https://github.com/geokousis/ddraptor" target="_blank">View on GitHub</a>
+          </div>
+          <div class="github-card">
+            <div class="github-card-header">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+              <span class="github-title">Good-Wines</span>
+            </div>
+            <div class="github-desc">Analysis of Vitis vinifera samples to identify key SNPs and enable targeted, cost-effective cultivar identification.</div>
+            <a class="github-link" href="https://github.com/geokousis/Good-Wines" target="_blank">View on GitHub</a>
+          </div>
+          <div class="github-card">
+            <div class="github-card-header">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+              <span class="github-title">BCProjects</span>
+            </div>
+            <div class="github-desc">Curated collection of bioinformatics exercises and projects, mostly as Jupyter notebooks for easy exploration.</div>
+            <a class="github-link" href="https://github.com/geokousis/BCProjects" target="_blank">View on GitHub</a>
+          </div>
+          <div class="github-card">
+            <div class="github-card-header">
+              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
+              <span class="github-title">Radiomics</span>
+            </div>
+            <div class="github-desc">Machine learning and feature extraction for vascular thrombi radiomics, with clustering and predictive modeling workflows.</div>
+            <a class="github-link" href="https://github.com/geokousis/Radiomics" target="_blank">View on GitHub</a>
+          </div>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    // Terminal animation for projects page
+    // Animate prompt: type 'cd projects', then update prompt to ~/projects$ and show content
+    const animEl = document.getElementById('terminal-anim');
+    const promptEl = document.getElementById('terminal-prompt');
+    const projectsContent = document.getElementById('projects-content');
+    const backCvIcon = document.getElementById('back-cv-icon');
+    const text = 'cd projects';
+    let i = 0;
+    function typeChar() {
+      animEl.textContent = text.slice(0, i);
+      if (i < text.length) {
+        i++;
+        setTimeout(typeChar, 40);
+      } else {
+        setTimeout(() => {
+          animEl.textContent = '';
+          promptEl.textContent = 'kousis@linux:~/projects$';
+          if (projectsContent) projectsContent.style.display = '';
+        }, 600);
+      }
+    }
+
+    typeChar();
+
+
+
+    // Back to CV icon click (always works)
+    const backIcon = document.getElementById('back-cv-icon');
+    if (backIcon) {
+      backIcon.addEventListener('click', function() {
+        window.location.href = 'index.html';
+      });
+    }
+  </script>
+</body>
+</html>
