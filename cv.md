@@ -7,7 +7,7 @@
 ---
 
 ## Professional Summary
-Motivated Bioinformatics Master’s student with a strong background in bioinformatics, biostatistics, and machine learning. Proven experience in academic research, laboratory environments, and data analysis. Interested in computational genomics, evolutionary bioinformatics, and translational cancer research.
+Motivated Bioinformatics Master’s student with a strong background in bioinformatics, biostatistics and machine learning. Proven experience in academic research, laboratory environments and data analysis. Interested in computational genomics, evolutionary bioinformatics and translational cancer research.
 
 ---
 
