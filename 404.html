@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Not Found</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-bar">
+      <span class="terminal-title">
+        <span id="terminal-prompt">kousis@linux:~$</span>&nbsp;<span id="terminal-anim"></span><span class="cursor" id="cursor"></span>
+      </span>
+      <div class="terminal-actions">
+        <button id="toggle-theme" aria-label="Toggle dark/light mode">☀</button>
+      </div>
+    </div>
+    <div class="terminal-main">
+      <div class="terminal-content" id="err-content" style="display:none;">
+        <pre class="cv-text" style="opacity:1;transform:none;">
+<b class="b2" style="color:var(--red)">bash: 404: No such file or directory</b>
+
+The page you're looking for doesn't exist.
+
+  <a href="index.html">cd ~</a>        go back to CV
+  <a href="projects.html">cd projects</a>  browse projects
+
+        </pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const animEl  = document.getElementById('terminal-anim');
+    const cursor  = document.getElementById('cursor');
+    const content = document.getElementById('err-content');
+
+    const cmd = 'cat ' + (window.location.pathname.split('/').pop() || '404.html');
+    let i = 0;
+    cursor.style.display = 'inline-block';
+    (function tick() {
+      animEl.textContent = cmd.slice(0, i);
+      if (i < cmd.length) { i++; setTimeout(tick, 42); }
+      else {
+        setTimeout(() => {
+          cursor.style.display = 'none';
+          content.style.display = '';
+        }, 500);
+      }
+    })();
+  </script>
+</body>
+</html>

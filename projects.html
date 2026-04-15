@@ -3,31 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Georgios Kousis Tsampazis</title>
+  <title>Projects — Georgios Kousis Tsampazis</title>
+  <meta name="description" content="Projects by Georgios Kousis Tsampazis — bioinformatics tools, NGS pipelines, web apps.">
+  <meta property="og:title" content="Projects — Georgios Kousis Tsampazis">
+  <meta property="og:description" content="Bioinformatics tools, NGS pipelines, and web apps by Georgios Kousis Tsampazis.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="terminal">
+
+    <!-- ── Bar ── -->
     <div class="terminal-bar">
-  <span class="terminal-title"><span id="terminal-prompt">kousis@cv:~$</span> <span id="terminal-anim"></span></span>
-      <div style="margin-left:auto;display:flex;align-items:center;gap:0.5em;">
-  <span id="back-cv-icon" onclick="window.location.href='index.html'" style="display:inline-flex;align-items:center;cursor:pointer;font-size:1.5em;padding:2px 8px;border-radius:4px;transition:background 0.2s,color 0.2s;" title="Back to CV">&#8230;</span>
-        <button id="toggle-theme" aria-label="Toggle dark/light mode">🌓</button>
+      <span class="terminal-title">
+        <span id="terminal-prompt">kousis@linux:~$</span>&nbsp;<span id="terminal-anim"></span><span class="cursor" id="cursor"></span>
+      </span>
+      <div class="terminal-actions">
+        <span id="back-cv-icon" title="Back to CV">&#8592; cv</span>
+        <button id="toggle-theme" aria-label="Toggle dark/light mode">☀</button>
       </div>
     </div>
+
+    <!-- ── Content ── -->
     <div class="terminal-main">
-        <div class="terminal-content" id="projects-content" style="display:none;">
+      <div class="terminal-content" id="projects-content" style="display:none;">
         <div class="github-cards">
-          <h2 class="github-section-title">Bioinformatics & Tools</h2>
-          <div class="github-card">
+
+          <h2 class="github-section-title sec-bio">Bioinformatics &amp; Tools</h2>
+
+          <div class="github-card" style="--card-accent: var(--teal)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">SoloVar</span>
             </div>
-            <div class="github-desc">Modular toolkit for somatic variant analysis (SNV & CNV) in tumor samples without a matching normal. YAML-driven, end-to-end pipelines.</div>
+            <div class="github-desc">Modular toolkit for somatic variant analysis (SNV &amp; CNV) in tumor samples without a matching normal. YAML-driven, end-to-end pipelines.</div>
             <a class="github-link" href="https://github.com/geokousis/SoloVar" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--green)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">Good-Wines</span>
@@ -35,7 +49,8 @@
             <div class="github-desc">Analysis of Vitis vinifera samples to identify key SNPs and enable targeted, cost-effective cultivar identification.</div>
             <a class="github-link" href="https://github.com/geokousis/Good-Wines" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--sapphire)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">ddraptor</span>
@@ -43,7 +58,8 @@
             <div class="github-desc">Tool for ddRAD enzyme selection and fragment analysis using Aho–Corasick pattern matching and summary visualizations.</div>
             <a class="github-link" href="https://github.com/geokousis/ddraptor" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--sky)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">BCProjects</span>
@@ -51,7 +67,8 @@
             <div class="github-desc">Curated collection of bioinformatics exercises and projects, mostly as Jupyter notebooks for easy exploration.</div>
             <a class="github-link" href="https://github.com/geokousis/BCProjects" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--mauve)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">yggdrasil</span>
@@ -59,7 +76,8 @@
             <div class="github-desc">Emacs package for phylogenetic tree visualization.</div>
             <a class="github-link" href="https://github.com/geokousis/yggdrasil" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--pink)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">Radiomics</span>
@@ -67,15 +85,17 @@
             <div class="github-desc">Machine learning and feature extraction for vascular thrombi radiomics, with clustering and predictive modeling workflows.</div>
             <a class="github-link" href="https://github.com/geokousis/Radiomics" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--peach)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">TNT-seq</span>
             </div>
-            <div class="github-desc">TNT-seq peak-calling and anchor-distance pipeline (Bash + Python): builds strand-specific peak summits from replicate bigWigs, computes summit-to-anchor distances (5′SS / 3′SS / start / stop), and optionally compares against steady-state m6A peaks.</div>
+            <div class="github-desc">Peak-calling and anchor-distance pipeline (Bash + Python): strand-specific peak summits from replicate bigWigs, summit-to-anchor distances, and m6A comparison.</div>
             <a class="github-link" href="https://github.com/geokousis/TNT-seq" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--red)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">Sanger-Analysis-Tool</span>
@@ -83,7 +103,8 @@
             <div class="github-desc">Rust-based tool + web app for handling and analyzing Sanger sequencing output files.</div>
             <a class="github-link" href="https://github.com/geokousis/Sanger-Analysis-Tool" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--lavender)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">scRNA-seq-Analysis</span>
@@ -91,8 +112,10 @@
             <div class="github-desc">Single-cell RNA-seq analysis notes and outputs for exploratory transcriptomics workflows.</div>
             <a class="github-link" href="https://github.com/geokousis/scRNA-seq-Analysis" target="_blank">View on GitHub</a>
           </div>
-          <h2 class="github-section-title">Websites & Web Apps</h2>
-          <div class="github-card">
+
+          <h2 class="github-section-title sec-web">Websites &amp; Web Apps</h2>
+
+          <div class="github-card" style="--card-accent: var(--blue)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">bioinfo-site</span>
@@ -100,7 +123,8 @@
             <div class="github-desc">TypeScript site for the MSc Bioinformatics program at the University of Crete, with Supabase integration and live online dashboard editing.</div>
             <a class="github-link" href="https://github.com/geokousis/bioinfo-site" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--sapphire)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">evolab-site</span>
@@ -108,7 +132,8 @@
             <div class="github-desc">TypeScript website created for EvoLab (laboratory), focused on lab content and communication.</div>
             <a class="github-link" href="https://github.com/geokousis/evolab-site" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--yellow)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">Vastraskogenadiko</span>
@@ -116,7 +141,8 @@
             <div class="github-desc">JavaScript web app for building pie charts inspired by warm pizzeria-style visuals.</div>
             <a class="github-link" href="https://github.com/geokousis/Vastraskogenadiko" target="_blank">View on GitHub</a>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--green)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">evocoffee</span>
@@ -125,8 +151,9 @@
             <a class="github-link" href="https://github.com/geokousis/evocoffee" target="_blank">View on GitHub</a>
           </div>
 
-          <h2 class="github-section-title">Closed Repositories</h2>
-          <div class="github-card">
+          <h2 class="github-section-title sec-closed">Closed Repositories</h2>
+
+          <div class="github-card" style="--card-accent: var(--overlay0)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">TGPrimers</span>
@@ -134,7 +161,8 @@
             <div class="github-desc">Private versatile primer design tool based on phylogeny.</div>
             <span class="github-meta closed-repo">Closed repository</span>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--overlay0)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">PrimerToolKit</span>
@@ -142,7 +170,8 @@
             <div class="github-desc">Private toolkit with reusable utilities for sequence preparation and primer handling.</div>
             <span class="github-meta closed-repo">Closed repository</span>
           </div>
-          <div class="github-card">
+
+          <div class="github-card" style="--card-accent: var(--overlay0)">
             <div class="github-card-header">
               <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" class="github-icon">
               <span class="github-title">Virani</span>
@@ -150,47 +179,53 @@
             <div class="github-desc">Private project on viral phylogenetics with ANI.</div>
             <span class="github-meta closed-repo">Closed repository</span>
           </div>
-        </div>
-        </div>
 
+        </div>
       </div>
     </div>
+
+
   </div>
+
   <script src="script.js"></script>
   <script>
-    // Terminal animation for projects page
-    // Animate prompt: type 'cd projects', then update prompt to ~/projects$ and show content
-    const animEl = document.getElementById('terminal-anim');
+    const animEl   = document.getElementById('terminal-anim');
+    const cursor   = document.getElementById('cursor');
     const promptEl = document.getElementById('terminal-prompt');
-    const projectsContent = document.getElementById('projects-content');
-    const backCvIcon = document.getElementById('back-cv-icon');
+    const content  = document.getElementById('projects-content');
+    const backIcon = document.getElementById('back-cv-icon');
+
+// Skip animation if we already saw it on the previous page
+    function showContent() {
+      animEl.textContent = '';
+      cursor.style.display = 'none';
+      promptEl.textContent = 'kousis@linux:~/projects$';
+      if (content) content.style.display = '';
+    }
+
+    if (sessionStorage.getItem('skipAnim')) {
+      sessionStorage.removeItem('skipAnim');
+      showContent();
+    } else {
+    // Type animation
     const text = 'cd projects';
     let i = 0;
-    function typeChar() {
+    cursor.style.display = 'inline-block';
+    (function tick() {
       animEl.textContent = text.slice(0, i);
-      if (i < text.length) {
-        i++;
-        setTimeout(typeChar, 40);
-      } else {
+      if (i < text.length) { i++; setTimeout(tick, 42); }
+      else {
         setTimeout(() => {
-          animEl.textContent = '';
-          promptEl.textContent = 'kousis@cv:~/projects$';
-          if (projectsContent) projectsContent.style.display = '';
+          showContent();
         }, 600);
       }
-    }
+    })();
+    } // end else
 
-    typeChar();
-
-
-
-    // Back to CV icon click (always works)
-    const backIcon = document.getElementById('back-cv-icon');
-    if (backIcon) {
-      backIcon.addEventListener('click', function() {
-        window.location.href = 'index.html';
-      });
-    }
+    // Back to CV
+    backIcon.addEventListener('click', function () {
+      window.location.href = 'index.html';
+    });
   </script>
 </body>
 </html>
